@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app2ouf
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/wagosec/argocd_lab.git
+    targetRevision: HEAD
+    path: app-config
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app2ouf
+  
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
