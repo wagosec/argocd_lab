@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: dico-tech
+  name: dico-app
 data:
   dest_address: "http://urlacceder-123/"
   valeur_metier: "metier trop bien"
